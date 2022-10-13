@@ -1,0 +1,562 @@
+/* ======Миксины====== */
+@import 'mixins.scss';
+/* ======/Миксины====== */
+
+/* ======Шрифты====== */
+@import 'fonts.scss';
+/* ======/Шрифты====== */
+
+/* ======Переменные====== */
+@import 'variables.scss';
+
+$font: Roboto;
+$dfont: 16px;
+
+/* ======/Переменные====== */
+
+/* ======Обнуление====== */
+@import 'null.scss';
+/* ======/Обнуление====== */
+
+body {
+    font-family: $font;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $maxWidthContainer + px;
+    padding: 0 10px;
+}
+
+.header {
+    background-color: $dcolor;
+    padding: 14px 0;
+
+    &>.container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 35px;
+        @media (max-width: $md3) {
+            display: none;
+        }
+    }
+
+    &__burger {
+        background-color: #000000;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__img {
+    }
+
+    &__name {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+
+        color: #FFFFFF;
+    }
+}
+.nav {
+    display: flex;
+    gap: 35px;
+
+    &__item {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+
+        transition: all .4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        &:hover {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transform: scale(1.05);
+        }
+    }
+}
+
+// ABOUT
+
+.about {
+    padding: 120px 0 136px 0;
+
+    @media (max-width: 1260px) {
+        padding: 80px 0 90px 0;
+    }
+    
+    &>.container {
+        display: flex;
+        flex-direction: column;
+        gap: 88px;
+
+        @media (max-width: 1260px) {
+            gap: 60px;
+        }
+    }
+
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__subtitle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+
+        color: rgba(0, 0, 0, 0.8);
+
+    }
+
+    &__info {
+    }
+}
+.info {
+    display: flex;
+
+    @media (max-width: 1260px) {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        // line-height: 47px;
+
+        color: #000000;
+
+        @media (max-width: $md5) {
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #000000;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        @media (max-width: 1260px) {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        color: #FFFFFF;
+
+        transition: all .4s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__img {
+        @media (max-width: 1260px) {
+            display: none;
+        }
+    }
+}
+.info-left {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.btn-github {
+    background: #297CFA;
+    padding: 14px 45px;
+}
+.btn-youtube {
+    background: rgba(250, 85, 85, 0.87);
+    padding: 14px 35px;
+}
+.info-right {
+    text-align: center;
+    &>span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: rgba(0, 0, 0, 0.8);
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+        @media (max-width: 1260px) {
+            display: none;
+        }
+    }
+}
+
+// HERO
+
+.hero {
+    background-color: #297CFA;
+    padding: 100px 0 120px 0;
+
+    background-image: url('../assets/images/hero_bg.png');
+    background-position: 50% 50%;
+    background-size: 160%;
+
+    &>.container {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    &__framework {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 64px;
+        background-color: #383838;
+        text-align: center;
+    }
+
+    &__techsteck {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 40px 64px;
+        background-color: #383838;
+        text-align: center;
+    }
+}
+.framework {
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #FFFFFF;
+
+        @media (max-width: $md5) {
+            font-size: 24px;
+        }
+    }
+
+    &__img {
+        padding: 20px 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__name {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        @media (max-width: $md5) {
+            font-size: 24px;
+        }
+    }
+}
+.techsteck {
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #FFFFFF;
+    }
+
+    &__imgs {
+        max-width: 300px;
+    }
+
+    &__name {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 490px) {
+        display: none;
+    }
+}
+
+// Projects
+
+.projects {
+    padding: 120px 0;
+
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+
+        color: #000000;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__subtitle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    &__content {
+        margin-top: 80px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 500px 500px;
+        gap: 80px;
+
+        @media (max-width: 1220px) {
+            grid-template-columns: 440px 440px;
+        }
+
+        @media (max-width: 1100px) {
+            grid-template-columns: 600px; 
+        }
+
+        @media (max-width: $md3) {
+            grid-template-columns: 400px;  
+        }
+
+        @media (max-width: $md4) {
+            grid-template-columns: 350px;  
+        }
+
+        @media (max-width: $md5) {
+            grid-template-columns: 300px;  
+        }
+        
+    }
+}
+
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: #383838;
+
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+
+        color: #FFFFFF;
+
+        @media (max-width: $md5) {
+            font-size: 36px;
+        }
+
+    }
+
+    &__desc {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        @media (max-width: $md5) {
+            font-size: 16px;
+        }
+
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__button {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        color: #FFFFFF;
+
+        transition: all .4s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width: $md5) {
+            font-size: 16px;
+            padding: 14px 35px;
+        }
+
+    }
+}
+.btn-github {
+}
+.btn-youtube {
+}
+
+// Footer
+
+.footer {
+    background-color: #297CFA;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    background-image: url('../assets/images/hero_bg.png');
+    background-position: 50% 50%;
+    background-size: 160%;
+
+    padding: 25px 0;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__nav {
+    }
+}
+.nav {
+
+    &__item {
+    }
+}
+.socialmedia {
+    display: flex;
+    gap: 40px;
+
+    &__img {
+    }
+}
+.rights {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+    @media (max-width: $md5) {
+        font-size: 15px;
+    }
+}
+
