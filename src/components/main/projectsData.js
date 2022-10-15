@@ -29,31 +29,31 @@ export default [
     },
     {
         id: 5,
-        name: "HandyF Clicker",
-        desc: "This is my first HTML and Javascript clicker. Gameplay clicker: click on the phone and earn clicks. For clicks, you can buy an improvement in the form of an increase...",
-        site: "https://handyf-clicker.netlify.app/",
-        git: "https://github.com/HandyFOff/Clicker",
-    },
-    {
-        id: 6,
         name: "UberEats",
         desc: "Ubereats is my very first good layout. The layout is made in pure HTML and CSS. A site about restaurants in Moscow and the like. I made this site for...",
         site: "https://handyf-ubereats.netlify.app/",
         git: "https://github.com/HandyFOff/ubereats",
     },
     {
-        id: 7,
+        id: 6,
         name: "Meme Generator",
         desc: "This is a simple meme generator made with Fetch API and React JS. Here you can make your own names and generate random pictures, thanks to which you get a possibly funny meme :)",
         site: "https://handyf-meme-generator.netlify.app/",
         git: "https://github.com/HandyFOff/meme-generator",
     },
     {
-        id: 8,
+        id: 7,
         name: "Computer Course",
         desc: "Website layout for computer courses. - Type of work on the site: Sale of Goods (Courses) - Adaptive Layout - Javascript elements - Working with SCSS - React JS - And much more",
         site: "https://handyf-computer-course.netlify.app",
         git: "https://github.com/HandyFOff/computer-course",
+    },
+    {
+        id: 8,
+        name: "HandyCloud",
+        desc: "HandyCloud is my site where you can see my work, information about me and my contact details. Welcome to my world of Front End Creator :D",
+        site: "https://handycloud.netlify.app/",
+        git: "https://github.com/HandyFOff/handycloud",
     },
     
 ]
