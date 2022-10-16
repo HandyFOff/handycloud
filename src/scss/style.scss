@@ -18,8 +18,18 @@ $dfont: 16px;
 @import 'null.scss';
 /* ======/Обнуление====== */
 
+::-webkit-scrollbar {
+    width: 12px;
+    position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bcbcbc;
+}
+
 body {
     font-family: $font;
+    overflow: hidden;
 }
 
 .container {
