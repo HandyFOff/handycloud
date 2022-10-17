@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className='footer'>
+        <footer className='footer' id='footer'>
             <h1 className='footer__title'>CONTACTS</h1>
             <nav className="footer__nav nav">
                     <a className="nav__item" href="#about">About</a>
